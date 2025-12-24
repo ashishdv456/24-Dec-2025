@@ -10,6 +10,7 @@ stages:
           inputs:
             terraformVersion: 'latest'
         - task: TerraformTask@5
+          displayName: init
           inputs:
             provider: 'azurerm'
             command: 'init'
@@ -19,6 +20,7 @@ stages:
             backendAzureRmContainerName: 'ashish1con'
             backendAzureRmKey: 'ashishkkey.tfstate'
         - task: TerraformTask@5
+          displayName: plan
           inputs:
             provider: 'azurerm'
             command: 'plan'
