@@ -18,5 +18,10 @@ stages:
             backendAzureRmStorageAccountName: 'ashishstorage24dec'
             backendAzureRmContainerName: 'ashish1con'
             backendAzureRmKey: 'ashishkkey.tfstate'
+        - task: TerraformTask@5
+          inputs:
+            provider: 'azurerm'
+            command: 'plan'
+            environmentServiceNameAzureRM: 'Dec_2225'
       
     
